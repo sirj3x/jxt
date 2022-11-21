@@ -1,0 +1,32 @@
+{
+    "name": "sirj3x/jxt",
+    "description": "JSON Web Token Authentication for Laravel & Lumen",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehdi Hashemi",
+            "email": "mhashemi0151@gmail.com",
+            "homepage": "https://mhashemi.ir",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "mhashemi0151@gmail.com"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sirj3x\\Jxt\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sirj3x\\Jxt\\JxtServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
