@@ -5,6 +5,7 @@ namespace Sirj3x\Jxt;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Sirj3x\Jxt\Console\JXTGenerateSecretCommand;
 
 class JxtServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,12 @@ class JxtServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/jxt.php' => config_path('jxt.php'),
         ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                JXTGenerateSecretCommand::class,
+            ]);
+        }
 
         // register auth driver
         Auth::viaRequest('jxt', function (Request $request) {

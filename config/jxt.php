@@ -5,7 +5,7 @@ return [
     'algo' => "AES-128-ECB",
 
     // algo password
-    'passphrase' => "c80n9tdIyhUOMmV6bD98kIMcNa638rnt8m3EAJ",
+    'passphrase' => env('JXT_SECRET'),
 
     // unit: second
     'expiration_period' => 2592000,
